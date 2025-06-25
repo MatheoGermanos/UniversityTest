@@ -1,0 +1,82 @@
+## 🔐 **Authentication & Authorization**
+
+* Create Users — store login credentials, central auth point
+* Create Roles
+* Create 'User Activity Logs' — store logs and audit what the user does
+* Create 'Ip Checklist' — to see if an IP is banned and count number of tries
+* Create Holds — to store if an account can be used
+
+---
+
+## 🏛️ **Organizational Structure**
+
+* Create Departments
+* Create Professors
+* Create Staff
+* Create Advisors — add to students, linked with professors
+
+---
+
+## 🧑‍🎓 **Academic Core**
+
+* Create Courses
+* Create 'Course Prerequisites'
+* Create 'Course Sections'
+* Create Classrooms
+* Create 'Course Schedules' — for room and time
+* Create Semesters
+* Create 'Academic Calendar' — store holidays/breaks/events
+* Create 'Course Material'
+* Create 'Course Rubric'
+* Create 'Course Grades' — for assignments, exams, and others (possibly a view)
+* Create AssignmentGrades
+* Create ExamGrades
+* Create Attendance
+* Create Enrollments
+* Create 'User Schedule'
+* Create 'GPA History' — store by Semester
+* Create 'Course History Tracking' — possibly a view
+* Create Transcripts — more of a view than a table
+* Create Degrees — degrees awarded to students
+
+---
+
+## 💰 **Financials**
+
+* Create 'Tuition Fees' — price per credits
+* Create Payments
+* Create 'Scholarships & Financial Aid'
+* Create 'Financial Aid Applications'
+* Create 'Fines & Penalties'
+
+---
+
+## 📢 **Communication & Engagement**
+
+* Create Announcements — Global / Department specific
+* Create Notifications — course section specific (from professor to students)
+* Create Clubs
+* Create Appointments — to store appointments between users
+
+---
+
+## 📝 **Feedback & Support**
+
+* Create 'Course Reviews'
+* Create Petitions — for types
+* Create 'User Petitions'
+* Create 'Support Tickets' — for any issues that may arise
+
+---
+
+## ⚖️ **Student Conduct & Records**
+
+* Create 'Disciplinary Actions' — for any actions taken against a student or professor
+
+---
+
+## 💼 **Career & Post-Grad Services**
+
+* Create 'Career Services' — for job postings and resume reviews
+
+---

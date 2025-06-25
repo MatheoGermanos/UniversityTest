@@ -3,17 +3,60 @@ Done:
 	-)Table Majors
 
 To Do:
+	-)Create Users -- store login credentials, central auth point
 	-)Create Professors
 	-)Create Departments
 	-)Create Semesters
-	-)Create Courses -- include prerequisites
+	-)Create Courses
+	-)Create 'Course Prerequisites'
 	-)Create 'Course sections'
-	-)Create Rooms
-	-)Create 'Course Section Room' -- for room and time
+	-)Create Classrooms
+	-)Create 'Course Schedules' -- for room and time
 	-)Create 'Course Material'
 	-)Create Enrollements
-	-)Create Grades
-	-)Create Advisors -- add to students
+	-)Create AssignmentGrades
+	-)Create ExamGrades
+	-)Create 'Course Rubric'
+	-)Create 'Course Grades' -- for asignments and exams and others, possibly a view
+	-)Create 'User Schedule'
+	-)Create Attendance
+	-)Create 'GPA History' -- store by Semester
+	-)Create 'Course History Tracking' -- possibly a view
+	-)Create Advisors -- add to students, linked with professors
+	-)Create Roles
+	-)Create Transcripts -- more of a view than a table
+	-)Create degrees -- degrees awarded to students
+	-)Create 'Academic Calendar' -- store holidays/breaks/events
+	-)Create 'Tuition Fees' -- price per credits
+	-)Create Payments
+	-)Create Announcements -- Global / Department specific
+	-)Create 'Course Reviews'
+	-)Create Petitions -- for types
+	-)Create 'User Petitions'
+	-)Create 'User Activity Logs' -- store logs and audit what the user does
+	-)Create Notifications -- course section specific( from professor to students )
+	-)Create 'Support Tickets' -- for any issues that may arise
+	-)Create 'Disciplinary Actions' -- for any actions taken against a student or professor
+	-)Create Staff
+	-)Create 'Scholarships & Financial Aid'
+	-)Create 'Financial Aid Applications'
+	-)Create 'Fines & Penalties'
+	-)Create Holds -- to store if an account can be used
+	-)Create Clubs
+	-)Create Appointments -- to store apontments between users
+	-)Create 'Career Services' -- for job posting and resume reviews
+	-)Create 'Ip Checklist' -- to see if an ip is banned and count number of tries
 	
 Future:
-	1)Create Angular/ThymeLeaf Frontend
+	-)Create Angular/ThymeLeaf Frontend
+	-)Library integration
+	-)Equipment Handeling -- for labs
+	
+Far Future:
+	-)AI integration
+		-FAQ Response
+		-Petition Response
+		-others
+	-)Comunication System
+	
+	
