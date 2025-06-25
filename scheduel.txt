@@ -1,0 +1,19 @@
+Done:
+	-)Table Students
+	-)Table Majors
+
+To Do:
+	-)Create Professors
+	-)Create Departments
+	-)Create Semesters
+	-)Create Courses -- include prerequisites
+	-)Create 'Course sections'
+	-)Create Rooms
+	-)Create 'Course Section Room' -- for room and time
+	-)Create 'Course Material'
+	-)Create Enrollements
+	-)Create Grades
+	-)Create Advisors -- add to students
+	
+Future:
+	1)Create Angular/ThymeLeaf Frontend
