@@ -29,7 +29,6 @@ Start by **grouping related functionality** into distinct services. You can use 
 * `Departments`, `Majors`, `Semesters`, `Advisors`
 * `Professors`, `Students`, `Staff`
 * `Course Rubric`, `Course Grades`, `ExamGrades`, `AssignmentGrades`
-* `Course Schedules`, `Classrooms`, `User Schedule`, `Attendance`
 * `Course Reviews`
 * `Academic Calendar`
 
