@@ -1,9 +1,10 @@
 Done:
-	-)Table Students
-	-)Table Majors
+	-)
 
 To Do:
 	-)Create Users -- store login credentials, central auth point
+	-)Table Students
+	-)Table Majors
 	-)Create Professors
 	-)Create Departments
 	-)Create Semesters
