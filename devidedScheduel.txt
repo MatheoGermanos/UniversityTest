@@ -1,82 +1,191 @@
-## 🔐 **Authentication & Authorization**
-
-* Create Users — store login credentials, central auth point
-* Create Roles
-* Create 'User Activity Logs' — store logs and audit what the user does
-* Create 'Ip Checklist' — to see if an IP is banned and count number of tries
-* Create Holds — to store if an account can be used
 
 ---
 
-## 🏛️ **Organizational Structure**
+## 🧩 Microservice Architecture Breakdown
 
-* Create Departments
-* Create Professors
-* Create Staff
-* Create Advisors — add to students, linked with professors
+Start by **grouping related functionality** into distinct services. You can use **Spring Cloud**, **Spring Security**, **Spring Data JPA**, **Eureka**, **Spring Gateway**, and **Docker/Kubernetes** eventually.
 
 ---
 
-## 🧑‍🎓 **Academic Core**
+### 🔐 1. **Authentication and Authorization Service**
 
-* Create Courses
-* Create 'Course Prerequisites'
-* Create 'Course Sections'
-* Create Classrooms
-* Create 'Course Schedules' — for room and time
-* Create Semesters
-* Create 'Academic Calendar' — store holidays/breaks/events
-* Create 'Course Material'
-* Create 'Course Rubric'
-* Create 'Course Grades' — for assignments, exams, and others (possibly a view)
-* Create AssignmentGrades
-* Create ExamGrades
-* Create Attendance
-* Create Enrollments
-* Create 'User Schedule'
-* Create 'GPA History' — store by Semester
-* Create 'Course History Tracking' — possibly a view
-* Create Transcripts — more of a view than a table
-* Create Degrees — degrees awarded to students
+**Purpose**: Handles login, signup, roles, permissions, JWT, user session tracking.
+
+* `Users` (credentials + profile)
+* `Roles`
+* `User Activity Logs`
+* `Holds`
+* `IP Checklist`
+
+🔧 Use: Spring Security + JWT + OAuth2 (if future external providers)
 
 ---
 
-## 💰 **Financials**
+### 🎓 2. **Academic Core Service**
 
-* Create 'Tuition Fees' — price per credits
-* Create Payments
-* Create 'Scholarships & Financial Aid'
-* Create 'Financial Aid Applications'
-* Create 'Fines & Penalties'
+**Purpose**: All course, curriculum, and grade tracking.
 
----
-
-## 📢 **Communication & Engagement**
-
-* Create Announcements — Global / Department specific
-* Create Notifications — course section specific (from professor to students)
-* Create Clubs
-* Create Appointments — to store appointments between users
+* `Courses`, `Course Sections`, `Course Prerequisites`, `Course Material`
+* `Departments`, `Majors`, `Semesters`, `Advisors`
+* `Professors`, `Students`, `Staff`
+* `Course Rubric`, `Course Grades`, `ExamGrades`, `AssignmentGrades`
+* `Course Schedules`, `Classrooms`, `User Schedule`, `Attendance`
+* `Course Reviews`
+* `Academic Calendar`
 
 ---
 
-## 📝 **Feedback & Support**
+### 📝 3. **Enrollment & Transcript Service**
 
-* Create 'Course Reviews'
-* Create Petitions — for types
-* Create 'User Petitions'
-* Create 'Support Tickets' — for any issues that may arise
+**Purpose**: Registration, history, GPA tracking, and transcripts.
 
----
-
-## ⚖️ **Student Conduct & Records**
-
-* Create 'Disciplinary Actions' — for any actions taken against a student or professor
+* `Enrollments`
+* `GPA History`
+* `Course History`
+* `Transcripts`
+* `Degrees`
+* `Petitions`, `User Petitions`
 
 ---
 
-## 💼 **Career & Post-Grad Services**
+### 💰 4. **Financial Service**
 
-* Create 'Career Services' — for job postings and resume reviews
+**Purpose**: Tuition, scholarships, payments, fines.
+
+* `Tuition Fees`
+* `Payments`
+* `Scholarships & Financial Aid`
+* `Financial Aid Applications`
+* `Fines & Penalties`
+
+---
+
+### 📢 5. **Communication & Notification Service**
+
+**Purpose**: Messaging between users and broadcast announcements.
+
+* `Notifications`
+* `Announcements`
+* `Support Tickets`
+* `Appointments`
+* `Disciplinary Actions`
+
+---
+
+### 🏫 6. **Student Life & Clubs Service**
+
+**Purpose**: Handles extracurricular and career support.
+
+* `Clubs`
+* `Career Services`
+* `User Activity Logs` (can also go in Auth)
+* `Equipment Handling` (labs)
+* `Library Integration`
+
+---
+
+## 📋 Project Phases (What to Do First to Last)
+
+---
+
+### ✅ **Phase 0 – Setup**
+
+* Set up project in **Git** (monorepo or polyrepo per service)
+* Define tech stack: Java 17+, Spring Boot 3, Docker, PostgreSQL, Kafka/RabbitMQ (for events)
+* Setup **Eureka (Service Discovery)** + **Spring Gateway**
+* Setup **CI/CD** pipelines
+
+---
+
+### 🚀 **Phase 1 – Foundational Services**
+
+> Get basic functionality up for auth, users, and core domain.
+
+1. **Auth Service**
+
+   * Create Users & Roles
+   * Login (JWT/OAuth2)
+   * IP Tracker
+   * Account Hold Logic
+
+2. **User Profile Service**
+
+   * Students, Professors, Staff
+   * Departments, Majors, Advisors
+
+3. **Academic Core Service**
+
+   * Courses, Sections, Classrooms
+   * Schedules & Prerequisites
+
+---
+
+### 📈 **Phase 2 – Enrollment & Grades**
+
+> Let students enroll and track grades.
+
+4. **Enrollment Service**
+
+   * Enrollments
+   * GPA Tracking
+   * Course History
+   * Rubrics, Assignment & Exam Grades
+
+---
+
+### 💸 **Phase 3 – Finance**
+
+> Add fees, payments, financial aid.
+
+5. **Finance Service**
+
+   * Tuition Fees, Payments
+   * Scholarships
+   * Fines & Holds
+
+---
+
+### 📢 **Phase 4 – Notifications & Support**
+
+> Add user interaction and logs.
+
+6. **Communication Service**
+
+   * Notifications (per course/section)
+   * Announcements
+   * Support Tickets
+   * Petitions
+
+---
+
+### 🌐 **Phase 5 – Integration & UX**
+
+> Add frontend and integrations.
+
+* Angular or Thymeleaf Frontend
+* Swagger docs for each service
+* Role-based dashboards
+* Student and staff dashboards
+
+---
+
+### 🔮 **Future Phases**
+
+> Enrich with smart features.
+
+* AI assistant (FAQ, Petitions)
+* Resume/Career portal
+* Messaging System
+* Data analytics on grades, performance, behavior
+
+---
+
+## ✅ Recommendations
+
+* Use **PostgreSQL** or **MySQL** for databases (per service if possible)
+* Use **Flyway** or **Liquibase** for DB migrations
+* Add **Spring Actuator + Prometheus/Grafana** for monitoring
+* Use **Kafka** or **RabbitMQ** for inter-service communication (async)
+* Use **OpenAPI / Swagger** to document each service
 
 ---
