@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class userActivityLog {
+public class userActivityLogModel {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID userActivityLogId;
