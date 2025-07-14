@@ -10,7 +10,6 @@ import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.university.auth_service.dtos.roleDto;
 import com.university.auth_service.dtos.userDto;
 import com.university.auth_service.mappers.userMapper;
 import com.university.auth_service.models.roleModel;
